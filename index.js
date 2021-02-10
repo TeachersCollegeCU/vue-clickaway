@@ -1,11 +1,11 @@
-import Vue from 'vue';
+// import Vue from 'vue';
 
 export var version = '2.2.2';
 
-var compatible = (/^2\./).test(Vue.version);
-if (!compatible) {
-  Vue.util.warn('VueClickaway ' + version + ' only supports Vue 2.x, and does not support Vue ' + Vue.version);
-}
+// var compatible = (/^2\./).test(Vue.version);
+// if (!compatible) {
+//   Vue.util.warn('VueClickaway ' + version + ' only supports Vue 2.x, and does not support Vue ' + Vue.version);
+// }
 
 
 
@@ -19,16 +19,16 @@ function bind(el, binding, vnode) {
   var vm = vnode.context;
 
   var callback = binding.value;
-  if (typeof callback !== 'function') {
-    if (process.env.NODE_ENV !== 'production') {
-      Vue.util.warn(
-        'v-' + binding.name + '="' +
-        binding.expression + '" expects a function value, ' +
-        'got ' + callback
-      );
-    }
-    return;
-  }
+  // if (typeof callback !== 'function') {
+  //   if (process.env.NODE_ENV !== 'production') {
+  //     Vue.util.warn(
+  //       'v-' + binding.name + '="' +
+  //       binding.expression + '" expects a function value, ' +
+  //       'got ' + callback
+  //     );
+  //   }
+  //   return;
+  // }
 
   // @NOTE: Vue binds directives in microtasks, while UI events are dispatched
   //        in macrotasks. This causes the listener to be set up before
